@@ -1,11 +1,12 @@
 import { Component } from '@angular/core';
 import { Comida } from '../comida';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-menu',
-  imports: [],
+  imports: [CommonModule],
   templateUrl: './menu.html',
-  styleUrl: './menu.css'
+  styleUrls: ['./menu.css']
 })
 export class Menu {
 
