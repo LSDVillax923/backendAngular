@@ -1,0 +1,20 @@
+<h2>Menu</h2>
+<table class = "table">
+    <thead>
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">Name</th>
+            <th scope="col">Description</th>
+            <th scope="col">Price</th>
+            <th scope="col">Image</th>
+        </tr>
+    </thead>    
+</table>
+
+<tbody>
+    <tr *ngFor="let comida of menu">
+        <td>{{ comida.name }}</td>
+        <td>{{ comida.description }}</td>
+        <td>{{ comida.price }}</td>
+    </tr>
+</tbody>
