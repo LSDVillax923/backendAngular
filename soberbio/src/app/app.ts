@@ -1,15 +1,15 @@
 import { Component} from '@angular/core';
-import { Menu } from "./comida/menu/menu";
+import { RouterLink, RouterLinkActive, RouterOutlet } from '@angular/router';
 
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.html',
   styleUrl: './app.css',
-  imports: [Menu],
+  imports: [RouterOutlet, RouterLink, RouterLinkActive],
 })
 export class App {
-  title = 'mi casa tio';
+  readonly currentYear = new Date().getFullYear();
 }
 
 

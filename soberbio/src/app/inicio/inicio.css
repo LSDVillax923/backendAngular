@@ -1,0 +1,13 @@
+.hero-section {
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url('https://images.unsplash.com/photo-1540189549336-e6e99c3679fe?auto=format&fit=crop&w=1400&q=80') center/cover no-repeat;
+}
+
+.hero-section a {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.hero-section a:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 0.75rem 1.5rem rgba(0, 0, 0, 0.25);
+}
