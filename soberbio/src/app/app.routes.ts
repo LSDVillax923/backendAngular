@@ -1,6 +1,6 @@
 import { Routes } from '@angular/router';
 import { Inicio } from './inicio/inicio';
-import { Menu } from './comida/menu/menu';
+import { Menu } from './menu/menu/menu';  
 
 export const routes: Routes = [
   { path: '', redirectTo: 'inicio', pathMatch: 'full' },
