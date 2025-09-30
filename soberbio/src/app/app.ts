@@ -9,6 +9,7 @@ import { RouterLink, RouterLinkActive, RouterOutlet } from '@angular/router';
   imports: [RouterOutlet, RouterLink, RouterLinkActive],
 })
 export class App {
+  readonly title = 'soberbio';
   readonly currentYear = new Date().getFullYear();
 }
 
