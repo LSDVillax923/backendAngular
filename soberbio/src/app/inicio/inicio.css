@@ -11,3 +11,170 @@
   transform: translateY(-2px);
   box-shadow: 0 0.75rem 1.5rem rgba(0, 0, 0, 0.25);
 }
+
+#presentacion {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 4rem 1.5rem;
+  background: radial-gradient(circle at top, rgba(255, 255, 255, 0.15), rgba(0, 0, 0, 0.9));
+}
+
+#logo-principal {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  border-radius: 1.5rem;
+  background: rgba(0, 0, 0, 0.6);
+  box-shadow: 0 1.25rem 3rem rgba(0, 0, 0, 0.45);
+}
+
+#cuerpo {
+  display: flex;
+  flex-direction: column;
+  gap: 6rem;
+  padding: 0 2rem 6rem;
+  background: linear-gradient(180deg, rgba(3, 3, 3, 0.95), rgba(10, 10, 10, 0.95));
+}
+
+#nosotros,
+#acerca,
+#chef,
+#awards {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 3rem;
+  padding: 4rem 3rem;
+  border-radius: 1.5rem;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(4px);
+}
+
+#nosotros img,
+#acerca img,
+#chef img,
+#awards img {
+  flex: 1 1 45%;
+  object-fit: cover;
+  border-radius: 1.25rem;
+  box-shadow: 0 1.25rem 2.5rem rgba(0, 0, 0, 0.35);
+}
+
+#nosotros .nosotros-text,
+#acerca .acerca-text,
+#chef .chef-text,
+#awards #awards-text {
+  flex: 1 1 55%;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+#inspiracion,
+#equipo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  padding: 4rem 3rem;
+  border-radius: 1.5rem;
+  background: rgba(255, 255, 255, 0.02);
+  text-align: center;
+}
+
+#inspiracion img,
+#equipo img {
+  width: 100%;
+  max-width: 900px;
+  border-radius: 1.5rem;
+  box-shadow: 0 1.5rem 3.5rem rgba(0, 0, 0, 0.4);
+}
+
+#contacto {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+  padding: 4rem 3rem;
+  border-radius: 1.5rem;
+  background: rgba(12, 12, 12, 0.92);
+  text-align: center;
+}
+
+#contacto .contacto-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 2.5rem;
+  text-align: left;
+}
+
+#contacto a {
+  color: inherit;
+  text-decoration: underline;
+}
+
+#ubicacion {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  padding: 4rem 3rem 5rem;
+  border-radius: 1.5rem;
+  background: radial-gradient(circle at center, rgba(20, 20, 20, 0.95), rgba(0, 0, 0, 0.95));
+  text-align: center;
+}
+
+#ubicacion iframe {
+  width: min(100%, 900px);
+  height: 420px;
+  border: none;
+  border-radius: 1.25rem;
+  box-shadow: 0 1.25rem 3rem rgba(0, 0, 0, 0.35);
+}
+
+@media (max-width: 1024px) {
+  #nosotros,
+  #acerca,
+  #chef,
+  #awards {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  #nosotros img,
+  #acerca img,
+  #chef img,
+  #awards img {
+    width: 100%;
+  }
+
+  #nosotros .nosotros-text,
+  #acerca .acerca-text,
+  #chef .chef-text,
+  #awards #awards-text {
+    align-items: center;
+  }
+}
+
+@media (max-width: 600px) {
+  #presentacion {
+    padding: 3rem 1rem;
+  }
+
+  #cuerpo {
+    padding: 0 1rem 4rem;
+    gap: 4rem;
+  }
+
+  #nosotros,
+  #acerca,
+  #chef,
+  #awards,
+  #inspiracion,
+  #equipo,
+  #contacto,
+  #ubicacion {
+    padding: 3rem 1.5rem;
+  }
+}
