@@ -1,76 +1,236 @@
-<section class="hero-section text-white text-center py-5">
-  <div class="container">
-    <h1 class="display-4 fw-bold mb-3">Bienvenido a Soberbio</h1>
-    <p class="lead mb-4">Una experiencia gastronómica que fusiona ingredientes frescos con técnicas de alta cocina.</p>
-    <div class="d-flex flex-wrap justify-content-center gap-3">
-      <a class="btn btn-primary btn-lg px-4" routerLink="/menu">Explorar menú</a>
-      <a class="btn btn-outline-light btn-lg px-4" href="https://wa.me/5215512345678" target="_blank" rel="noopener">Reservar mesa</a>
-    </div>
+<!-- ====== NAVBAR ====== -->
+<nav class="navbar">
+  <!-- Logo superior que lleva a la página de inicio -->
+  <a routerLink="/inicio" id="logo-superior">
+    <img src="/images/logos/logoPrincipalMinimalista.png" height="120" alt="Logo SOBERBIO" />
+  </a>
+
+  <div class="nav-actions">
+    <a routerLink="/login" class="btn-reservar-top">Iniciar Sesion</a>
+
+    <button id="menu-toggle" class="menu-toggle" aria-label="Menú">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
   </div>
-</section>
+  </nav>
 
-<section class="container my-5">
-  <div class="row g-4">
-    <div class="col-md-4">
-      <div class="card h-100 shadow-sm">
-        <div class="card-body">
-          <h2 class="h4 card-title">Ingredientes locales</h2>
-          <p class="card-text">Trabajamos con productores regionales para garantizar sabores auténticos en cada plato.</p>
-        </div>
-      </div>
-    </div>
-    <div class="col-md-4">
-      <div class="card h-100 shadow-sm">
-        <div class="card-body">
+<div id="menu-overlay" class="menu-overlay">
+  <ul>
+    <li><a routerLink="/inicio">Inicio</a></li>
+    <li><a routerLink="/nosotros">Nosotros</a></li>
+    <li><a routerLink="/menu">Menú</a></li>
+    <li><a routerLink="/login">Iniciar Sesion</a></li>
+    <li><a routerLink="/comida/lista">Comidas</a></li>
+  </ul>
+</div>
 
-          
-          <h2 class="h4 card-title">Maridaje perfecto</h2>
-          <p class="card-text">Nuestra cava cuenta con etiquetas seleccionadas para acompañar cada una de tus elecciones.</p>
-        </div>
-      </div>
-    </div>
-    <div class="col-md-4">
-      <div class="card h-100 shadow-sm">
-        <div class="card-body">
-          <h2 class="h4 card-title">Ambiente acogedor</h2>
-          <p class="card-text">Disfruta de un espacio diseñado para compartir momentos inolvidables con quienes más quieres.</p>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
+<!-- ====== PRESENTACIÓN ====== -->
+<div id="presentacion">
+  <a id="logo-principal">
+    <img src="/images/logos/logoPrincipal.png" alt="Logo principal" height="500" />
+  </a>
+</div>
 
-<section class="bg-light py-5">
-  <div class="container">
-    <div class="row align-items-center g-4">
-      <div class="col-lg-6">
-        <h2 class="h3 mb-3">Eventos especiales y catering</h2>
-        <p>Contamos con opciones personalizadas para celebraciones privadas, eventos corporativos y servicio a domicilio.</p>
-      </div>
-      <div class="col-lg-6">
-        <div class="ratio ratio-16x9 rounded overflow-hidden shadow-sm">
-          <iframe src="https://www.youtube.com/embed/GXoZLPSw8U8" title="Presentación del restaurante" allowfullscreen></iframe>
-        </div>
-      </div>
+<!-- ====== CONTENEDOR PRINCIPAL ====== -->
+<div id="cuerpo">
+  <!-- ====== SECCIÓN: NOSOTROS ====== -->
+  <section id="nosotros">
+    <div class="nosotros-text">
+      <h2>Nosotros</h2>
+      <p>
+        Soberbio es un bistró contemporáneo colombiano, ubicado en el corazón de Bogotá. Bajo la dirección del chef
+        Hugo Rodallega, este espacio culinario se distingue por su elegancia y por una propuesta gastronómica que rinde
+        homenaje a los productores locales, exaltando los sabores auténticos de la región a través de ingredientes frescos y cuidadosamente seleccionados.
+      </p>
+      <button>VER GALERÍA</button>
     </div>
-  </div>
-</section>
 
-<section class="container py-5">
-  <div class="row gy-4">
-    <div class="col-md-6">
-      <h2 class="h3">Horarios</h2>
-      <ul class="list-unstyled">
-        <li><strong>Lunes a jueves:</strong> 13:00 - 22:00 h</li>
-        <li><strong>Viernes y sábado:</strong> 13:00 - 00:00 h</li>
-        <li><strong>Domingo:</strong> 13:00 - 18:00 h</li>
+    <!-- Imagen de equipo de cocina -->
+    <img src="/images/personas/cocineros.png" alt="cocineros" />
+  </section>
+
+  <!-- ====== SECCIÓN: ACERCA DE ====== -->
+  <section id="acerca">
+    <div class="acerca-text">
+      <h2>Acerca de</h2>
+      <p>
+        Cada creación de Soberbio rinde homenaje a la riqueza de la tierra colombiana, inspirándose en la diversidad de
+        sus productores. Nuestro menú evoluciona al compás de la naturaleza, aprovechando cada ingrediente en su máximo
+        esplendor.
+        <br /><br />
+        <strong>Ofrecemos:</strong>
+      </p>
+      <ul>
+        <li>Menú a la carta</li>
+        <li>Menú degustación</li>
+        <li>Opciones vegetarianas</li>
       </ul>
+      <a routerLink="/menu"><button>MENU</button></a>
     </div>
-    <div class="col-md-6">
-      <h2 class="h3">Contacto</h2>
-      <p class="mb-1">Teléfono: <a href="tel:+525512345678">+52 55 1234 5678</a></p>
-      <p class="mb-1">Correo: <a href="mailto:hola@soberbio.mx">hola@soberbio.mx</a></p>
-      <p>Dirección: Av. Del Sabor 123, Ciudad de México</p>
+
+    <!-- Imagen de comedor -->
+    <img src="/images/personas/comedor.png" height="400" alt="comedor" />
+  </section>
+
+  <!-- ====== SECCIÓN: INSPIRACIÓN ====== -->
+  <section id="inspiracion">
+    <h2>Inspiración</h2>
+    <p>
+      Desde su apertura en 2017, Hugo Rodallega ha trabajado estrechamente con pequeños productores colombianos,
+      garantizando platos que no solo deleitan el paladar, sino que también apoyan el desarrollo de la agricultura
+      local. La creatividad y la conexión con la tierra son las fuerzas motrices que inspiran cada creación culinaria
+      para mostrar la biodiversidad de Colombia.
+    </p>
+
+    <!-- Imagen de platos/inspiraciones -->
+    <img src="/images/platos/inspiraciones.png" height="600" alt="Inspiración" />
+  </section>
+
+  <!-- ====== SECCIÓN: CHEF ====== -->
+  <section id="chef">
+    <div class="chef-text">
+      <h2>El Chef, El pibe Valderrama</h2>
+      <p>
+        Hugo Rodallega es el corazón y alma de Soberbio. Su carrera comenzó en la Escuela de Hostelería Hofmann en
+        Barcelona y continuó en Le Cordon Bleu en París. Con experiencia en restaurantes con estrellas Michelin en
+        París, Nueva York, y Dinamarca, Clavijo ha perfeccionado un estilo que combina la disciplina europea con la
+        creatividad latina. Su visión al fundar El Chato fue redefinir la gastronomía colombiana y posicionarla en el
+        mapa mundial, ofreciendo una experiencia culinaria que trasciende lo convencional.
+      </p>
+
+      <!-- Botón que navega a la página de reservas -->
+      <a routerLink="/login"><button>Iniciar Sesion</button></a>
     </div>
+
+    <!-- Imagen del chef -->
+    <img src="/images/personas/chef.png" height="600" alt="Chef" />
+  </section>
+
+  <!-- ====== SECCIÓN: EQUIPO ====== -->
+  <section id="equipo">
+    <h2>El Equipo</h2>
+    <p>
+      El equipo de Soberbio comparte la misma pasión y compromiso que su chef. Compuesto por profesionales dedicados,
+      cada miembro contribuye al ambiente cálido y acogedor que distingue al restaurante. Su trabajo colectivo asegura
+      que cada aspecto de la experiencia gastronómica, desde la cocina hasta el servicio, sea excepcional.
+    </p>
+
+    <!-- Imagen del equipo -->
+    <img src="/images/personas/equipo.png" height="600" alt="Equipo" />
+  </section>
+
+  <!-- ====== SECCIÓN: AWARDS ====== -->
+  <section id="awards">
+    <div id="awards-text">
+      <h2>Awards</h2>
+      <p>Hugo Rodallega ha sido reconocido internacionalmente por su excelencia culinaria:</p>
+      <ul>
+        <li>
+          <p><strong>2018:</strong> Debutó en el puesto 21 de los Latin America’s 50 Best Restaurants como "Highest New Entry".</p>
+        </li>
+        <li>
+          <p><strong>2019 y 2020:</strong> Mantuvo el puesto 7 entre los mejores restaurantes de Latinoamérica.</p>
+        </li>
+        <li>
+          <p><strong>2022:</strong> Ascendió al 5º lugar en Latin America’s 50 Best Restaurants y al puesto 83 en The World’s 50 Best Restaurants. Además, Hugo Rodallega fue clasificado como el chef número 86 en The Best Chef Awards.</p>
+        </li>
+        <li>
+          <p><strong>2023:</strong> Reconocido como el 2º mejor restaurante de Latinoamérica y el mejor de Colombia, escalando al puesto 33 en The World’s 50 Best Restaurants.</p>
+        </li>
+        <li>
+          <p><strong>2024:</strong> El Chato alcanzó el puesto 25 en The World’s 50 Best Restaurants, consolidándose como líder en la gastronomía mundial y el único restaurante colombiano en la lista.</p>
+        </li>
+      </ul>
+      <a routerLink="/login"><button>Iniciar Sesion</button></a>
+    </div>
+    <!-- Imagen de premiación -->
+    <img src="/images/personas/chefPremio.png" height="600" alt="Awards" />
+  </section>
+
+  <!-- ====== SECCIÓN: CONTACTO ====== -->
+  <section id="contacto">
+    <h1>Contacto</h1>
+
+    <!-- grilla con horarios y correos de contacto -->
+    <div class="contacto-grid">
+      <!-- Columna: Horarios y teléfonos -->
+      <div>
+        <h3>Horarios</h3>
+        <p>Lunes a Sábados: 12:00pm - 11:00pm</p>
+        <p>Domingo: 12:00pm - 05:00pm</p>
+        <p>
+          WhatsApp:
+          <a href="https://wa.me/573155095645" target="_blank" rel="noopener">+57 3155095645</a>
+        </p>
+        <p>
+          Teléfono:
+          <a href="tel:+576017439931">+57 (601) 743 9931</a>
+        </p>
+      </div>
+
+      <!-- Columna: Correos por área -->
+      <div>
+        <h3>Inquiries</h3>
+        <p>Reservas: <a href="mailto:reservas@soberbio.com">reservas@soberbio.com</a></p>
+        <p>Business: <a href="mailto:marketing@soberbio.com">marketing@soberbio.com</a></p>
+        <p>Public Relations y Alianzas: <a href="mailto:pr@soberbio.com">pr@soberbio.com</a></p>
+        <p>Eventos: <a href="mailto:eventos@soberbio.com">eventos@soberbio.com</a></p>
+        <p>Trabaja con Nosotros: <a href="mailto:admin@soberbio.com">admin@soberbio.com</a></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== SECCIÓN: UBICACIÓN (MAPA) ====== -->
+  <section id="ubicacion">
+    <h2>Ubicación</h2>
+
+    <!-- Mapa de Google incrustado -->
+    <iframe
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3976.999999999!2d-74.063644!3d4.610868!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x5c5c5c5c5c5c5c5c!2sSOBERBIO!5e0!3m2!1ses!2sco!4v1699999999999"
+      allowfullscreen
+      loading="lazy"
+      referrerpolicy="no-referrer-when-downgrade"
+    ></iframe>
+  </section>
+</div>
+
+<!-- ====== FOOTER ====== -->
+<hr />
+<footer>
+  <!-- Logo del footer que devuelve a inicio -->
+  <a routerLink="/inicio">
+    <img src="/images/logos/logoPrincipal.png" height="150" alt="Logo SOBERBIO" title="Inicio" />
+  </a>
+
+  <!-- Enlaces internos de navegación -->
+  <ul>
+    <li><a href="#nosotros">Nosotros</a></li>
+    <li><a href="#acerca">Acerca de</a></li>
+    <li><a href="#chef">El Chef</a></li>
+    <li><a href="#awards">Awards</a></li>
+    <li><a href="#contacto">Contacto</a></li>
+    <li><a href="#prensa">Prensa</a></li>
+    <li><a href="gallery.html">Galería</a></li>
+  </ul>
+
+  <!-- Redes sociales -->
+  <div class="social">
+    <a href="https://www.instagram.com/soberbio.bistro/" target="_blank" rel="noopener"
+      ><img src="/images/logos/instagram.png" height="40" alt="Instagram" title="Instagram"
+    /></a>
+    <a href="https://wa.me/573155095645" target="_blank" rel="noopener"
+      ><img src="/images/logos/whatsapp.png" height="40" alt="WhatsApp" title="WhatsApp"
+    /></a>
+    <a href="https://www.facebook.com/soberbio.bistro" target="_blank" rel="noopener"
+      ><img src="/images/logos/facebook.png" height="40" alt="Facebook" title="Facebook"
+    /></a>
+    <a href="https://apps.apple.com/es/app/facetime/id1110145091" target="_blank" rel="noopener"
+      ><img src="/images/logos/phone.png" height="40" alt="Teléfono" title="Teléfono"
+    /></a>
+    <a href="https://www.google.com/maps/place/SOBERBIO/" target="_blank" rel="noopener"
+      ><img src="/images/logos/location.png" height="40" alt="Maps" title="Maps"
+    /></a>
   </div>
-</section>
+  </footer>
