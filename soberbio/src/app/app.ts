@@ -28,7 +28,7 @@ export class App {
     { label: 'Menú', commands: ['/menu'], activeOptions: { exact: false } },
     { label: 'Carrito', commands: ['/carrito'], activeOptions: { exact: true } },
     { label: 'Iniciar sesión', commands: ['/login'], activeOptions: { exact: true } },
-    { label: 'Registrarse', commands: ['/sing-in'], activeOptions: { exact: true } },
+    { label: 'Registrarse', commands: ['/sign-in'], activeOptions: { exact: true } },
 
   ];
   readonly supportingLinks: readonly AppNavigationLink[] = [

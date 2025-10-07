@@ -16,11 +16,11 @@ interface SocialLink {
 }
 
 @Component({
-  selector: 'app-sing-in',
+  selector: 'app-sign-in',
    standalone: true,
   imports: [RouterLink, NgForOf, NgIf],
-  templateUrl: './sing-in.html',
-    styleUrl: './sing-in.css',
+  templateUrl: './sign-in.html',
+    styleUrl: './sign-in.css',
 })
 export class SingIn {
   readonly footerLinks: FooterLink[] = [

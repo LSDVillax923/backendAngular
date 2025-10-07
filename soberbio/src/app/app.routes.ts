@@ -15,8 +15,8 @@ export const routes: Routes = [
     loadComponent: () => import('./carrito/carrito').then((m) => m.Carrito)
   },
   {
-    path: 'sing-in',
-    loadComponent: () => import('./sing-in/sing-in').then((m) => m.SingIn)
+    path: 'sign-in',
+    loadComponent: () => import('./sign-in/sign-in').then((m) => m.SingIn)
   },
   {
     path: 'login',
