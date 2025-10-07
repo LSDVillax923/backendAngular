@@ -1,87 +1,62 @@
-<div class="signin-page">
-  <section class="signin-content" aria-labelledby="signin-title">
-    <a routerLink="/inicio" class="signin-logo" aria-label="Volver al inicio">
+<div class="login-page">
+  <section class="login-hero" aria-labelledby="login-title">
+    <a routerLink="/inicio" class="login-logo" aria-label="Volver al inicio">
       <img src="/images/logos/logoPrincipalMinimalista.png" alt="Logo SOBERBIO" height="120" />
-    </a> <div class="signin-card">
-      <h1 id="signin-title">Crear cuenta</h1>
-      <p class="signin-intro">
-        Únete a la experiencia SOBERBIO creando tu cuenta y descubre un mundo de sabores exclusivos.
-      </p>
+    </a>
+    <p class="login-intro">
+      Bienvenido de nuevo a Soberbio. Ingresa tus datos para acceder a tu experiencia personalizada.
+    </p>
+  </section>
 
-      <h1 id="signin-title">Crear cuenta</h1>
+  <section class="login-form-section">
+     <div class="login-form">
+      <h1 id="login-title">Iniciar sesión</h1>
       <form (submit)="onSubmit($event)" novalidate>
-        <label for="first-name">Nombres</label>
-        <input
-          type="text"
-          id="first-name"
-          name="firstName"
-          placeholder="Tu nombre"
-          autocomplete="given-name"
-          required
-        />
+         <label for="nombres">Nombres</label>
+        <input type="text" id="nombres" name="nombres" placeholder="Ingresa tus nombres" required />
 
-        <label for="last-name">Apellidos</label>
-        <input
-          type="text"
-          id="last-name"
-          name="lastName"
-          placeholder="Tus apellidos"
-          autocomplete="family-name"
-          required
-        />
 
-        <label for="email">Correo</label>
-        <input
-          type="email"
-          id="email"
-          name="email"
-          placeholder="nombre@ejemplo.com"
-          autocomplete="email"
-          required
-        />
+        <section class="login-form-section">
+     <div class="login-form">
+      <h1 id="login-title">Iniciar sesión</h1>
+      <form (submit)="onSubmit($event)" novalidate>
+         <label for="apellido">Apellido</label>
+        <input type="text" id="apellido" name="apellido" placeholder="Ingresa tus apellidos" required />
 
-        <label for="phone">Teléfono</label>
-        <input
-          type="tel"
-          id="phone"
-          name="phone"
-          placeholder="Ej. +57 300 123 4567"
-          autocomplete="tel"
-          required
-        />
 
-        <label for="address">Dirección</label>
-        <input
-          type="text"
-          id="address"
-          name="address"
-          placeholder="Ingresa tu dirección"
-          autocomplete="street-address"
-          required
-        />
 
-        <label for="password">Contraseña</label>
-        <input
-          type="password"
-          id="password"
-          name="password"
-          placeholder="Crea una contraseña segura"
-          autocomplete="new-password"
-          required
-        />
+        <section class="login-form-section">
+     <div class="login-form">
+      <h1 id="login-title">Iniciar sesión</h1>
+      <form (submit)="onSubmit($event)" novalidate>
+         <label for="telefono">Teléfono</label>
+        <input type="tel" id="telefono" name="telefono" placeholder="Ingresa tu número de teléfono" required />
 
-        <button type="submit">Registrarse</button>
+
+
+        <section class="login-form-section">
+     <div class="login-form">
+      <h1 id="login-title">Iniciar sesión</h1>
+      <form (submit)="onSubmit($event)" novalidate>
+         <label for="direccion">Dirección</label>
+        <input type="text" id="direccion" name="direccion" placeholder="Ingresa tu dirección" required />
+
+          <label for="password">Contraseña</label>
+        <input type="password" id="password" name="password" placeholder="Ingresa tu contraseña" required />
+ <button type="submit">Iniciar sesión</button>
       </form>
-      <p class="form-text">
-        ¿Ya tienes una cuenta?
-        <a routerLink="/login">Ingresa</a>
+        <p class="form-text">
+        ¿No tienes una cuenta?
+        <a routerLink="../sign-in">Regístrate</a>
       </p>
     </div>
   </section>
 
-  <hr />
+ <hr />
 
-  <footer class="signin-footer">
+
+
+  <footer class="login-footer">
     <a routerLink="/inicio" class="footer-logo" aria-label="Ir al inicio">
       <img src="/images/logos/logoPrincipal.png" height="150" alt="Logo SOBERBIO" title="Inicio" />
     </a>
@@ -114,15 +89,6 @@
       </a>
     </div>
   </footer>
-</div>
-
-
-
-
-
-
-
-
 
 
 
