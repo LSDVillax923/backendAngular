@@ -1,6 +1,6 @@
 .menu {
   position: absolute;
-  top: clamp(0.1%, 15vh, 8rem);
+  top: clamp(4rem, 15vh, 8rem);
   left: 50%;
   transform: translateX(-50%);
   display: flex;
