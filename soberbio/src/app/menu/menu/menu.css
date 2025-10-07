@@ -1,6 +1,6 @@
 .menu {
   position: absolute;
-  top: clamp(4rem, 15vh, 8rem);
+  top: clamp(0.1%, 15vh, 8rem);
   left: 50%;
   transform: translateX(-50%);
   display: flex;
@@ -9,7 +9,7 @@
   gap: clamp(0.75rem, 2.75vw, 1.5rem);
   padding: clamp(0.75rem, 2.5vw, 1.25rem) clamp(1.75rem, 6vw, 2.75rem);
   background: rgba(6, 6, 6, 0.72);
-   border: 1px solid rgba(255, 255, 255, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.2);
   border-radius: 999px;
   box-shadow: 0 1.75rem 3.5rem rgba(0, 0, 0, 0.45);
   z-index: 5;
