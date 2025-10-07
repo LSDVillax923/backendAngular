@@ -16,7 +16,7 @@
   position: sticky;
   top: 0;
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
   align-items: center;
   padding: clamp(1rem, 3vw, 1.75rem) clamp(1.25rem, 5vw, 3rem);
   background: rgba(6, 6, 6, 0.9);

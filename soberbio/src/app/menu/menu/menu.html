@@ -7,19 +7,6 @@
       </a>
     </div>
 
-    <div class="right">
-      <a routerLink="/login"><button type="button">Iniciar Sesión</button></a>
-      <a routerLink="/carrito"><button type="button">Carrito</button></a>
-      <a
-        *ngFor="let social of socialLinks"
-        [href]="social.href"
-        target="_blank"
-        rel="noopener noreferrer"
-        [title]="social.title"
-      >
-        <img class="icon" [src]="social.icon" [alt]="social.alt" loading="lazy" />
-      </a>
-    </div>
   </header>
 
   <!-- ====== CUERPO MENÚ ====== -->
