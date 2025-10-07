@@ -29,14 +29,7 @@
 }
 
 .section-heading::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  width: clamp(4rem, 12vw, 8rem);
-  height: 3px;
-  background: rgba(209, 165, 97, 0.75);
-  border-radius: 999px;
+  content: none;
 }
 
 
