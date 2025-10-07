@@ -1,6 +1,7 @@
 :host {
   display: block;
-  background: #060606;
+  background: linear-gradient(rgba(2, 2, 2, 0.65), rgba(2, 2, 2, 0.85)),
+    url('/images/imagenes-fondo/soberbioBistroistro.jpg') center/cover no-repeat;
   color: #f5f5f5;
   min-height: 100vh;
   font-family: 'Poppins', 'Helvetica Neue', Arial, sans-serif;
@@ -10,61 +11,6 @@
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-}
-
-#toolbar {
-  position: sticky;
-  top: 0;
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  padding: clamp(1rem, 3vw, 1.75rem) clamp(1.25rem, 5vw, 3rem);
-  background: rgba(6, 6, 6, 0.9);
-  backdrop-filter: blur(12px);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
-  z-index: 10;
-}
-
-#toolbar .left a {
-  display: inline-flex;
-  align-items: center;
-}
-
-#toolbar-logo {
-  height: clamp(48px, 8vw, 72px);
-}
-
-#toolbar .right {
-  display: flex;
-  align-items: center;
-   gap: clamp(0.75rem, 2vw, 1.5rem);
-}
-
-#toolbar button {
-  border: none;
-  border-radius: 999px;
-  padding: 0.65rem 1.6rem;
-  font-weight: 600;
-  cursor: pointer;
-  transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
-  background: #f5f5f5;
-  color: #060606;
-}
-
-#toolbar button:hover {
-  transform: translateY(-1px);
-  box-shadow: 0 0.9rem 1.8rem rgba(0, 0, 0, 0.25);
-}
-
-#toolbar .icon {
-  width: clamp(26px, 3vw, 32px);
-  height: clamp(26px, 3vw, 32px);
-  filter: brightness(0) invert(1);
-  transition: transform 0.2s ease;
-}
-
-#toolbar .icon:hover {
-  transform: translateY(-1px) scale(1.05);
 }
 
 #cuerpo-menu {
