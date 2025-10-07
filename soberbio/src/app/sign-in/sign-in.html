@@ -1,16 +1,13 @@
-<div class="signin-page login-page">
-  <section class="signin-hero login-hero" aria-labelledby="signin-title">
-    <a routerLink="/inicio" class="signin-logo login-logo" aria-label="Volver al inicio">
+<div class="signin-page">
+  <section class="signin-content" aria-labelledby="signin-title">
+    <a routerLink="/inicio" class="signin-logo" aria-label="Volver al inicio">
       <img src="/images/logos/logoPrincipalMinimalista.png" alt="Logo SOBERBIO" height="120" />
-    </a>
-    <p class="signin-intro login-intro">
-      Únete a la experiencia Soberbio creando tu cuenta. Completa el formulario para reservar con
-      facilidad y mantenerte al día con nuestras novedades.
-    </p>
-  </section>
+    </a> <div class="signin-card">
+      <h1 id="signin-title">Crear cuenta</h1>
+      <p class="signin-intro">
+        Únete a la experiencia SOBERBIO creando tu cuenta y descubre un mundo de sabores exclusivos.
+      </p>
 
- <section class="signin-form-section login-form-section">
-    <div class="signin-form login-form">
       <h1 id="signin-title">Crear cuenta</h1>
       <form (submit)="onSubmit($event)" novalidate>
         <label for="first-name">Nombres</label>
@@ -84,7 +81,7 @@
 
   <hr />
 
-  <footer class="signin-footer login-footer">
+  <footer class="signin-footer">
     <a routerLink="/inicio" class="footer-logo" aria-label="Ir al inicio">
       <img src="/images/logos/logoPrincipal.png" height="150" alt="Logo SOBERBIO" title="Inicio" />
     </a>
