@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
-import { Menu } from './menu/menu/menu';
+import { RouterLink, RouterLinkActive, RouterOutlet } from '@angular/router';
 
 
 
@@ -9,7 +8,7 @@ import { Menu } from './menu/menu/menu';
   templateUrl: './app.html',
   styleUrl: './app.css',
   standalone: true,
-  imports: [RouterOutlet, Menu],
+  imports: [RouterOutlet, RouterLink, RouterLinkActive],
 })
 export class App {
   readonly title = 'soberbio';
