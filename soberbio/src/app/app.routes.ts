@@ -1,10 +1,14 @@
 import { Routes } from '@angular/router';
-import { Inicio } from './inicio/inicio';
-import { Menu } from './menu/menu/menu';  
-
+ 
 export const routes: Routes = [
   { path: '', redirectTo: 'inicio', pathMatch: 'full' },
-  { path: 'inicio', component: Inicio },
-  { path: 'menu', component: Menu },
+ {
+    path: 'inicio',
+    loadComponent: () => import('./inicio/inicio').then((m) => m.Inicio)
+  },
+  {
+    path: 'menu',
+    loadComponent: () => import('./menu/menu/menu').then((m) => m.Menu)
+  },
   { path: '**', redirectTo: 'inicio' }
 ];
