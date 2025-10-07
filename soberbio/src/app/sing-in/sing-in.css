@@ -1,0 +1,157 @@
+:host {
+  display: block;
+}
+
+.signin-page {
+  min-height: 100vh;
+  background-image: url('/images/imagenes-fondo/soberbioBistroistro.jpg');
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  padding-top: clamp(80px, 16vh, 200px);
+  font-family: Georgia, 'Times New Roman', serif;
+  color: #fff;
+}
+
+.signin-hero {
+  text-align: center;
+  max-width: 40rem;
+  margin-bottom: 2rem;
+}
+
+.signin-logo img {
+  width: 100%;
+  max-width: 180px;
+  height: auto;
+}
+
+.signin-intro {
+  margin-top: 1rem;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.signin-form-section {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 0 1.5rem;
+}
+
+.signin-form {
+  background: rgba(50, 50, 50, 0.75);
+  color: #fff;
+  padding: 1.75rem;
+  border-radius: 12px;
+  width: 90%;
+  max-width: 460px;
+  backdrop-filter: blur(4px);
+}
+
+.signin-form h1 {
+  margin: 0 0 0.75rem;
+  font-size: clamp(1.75rem, 2vw, 2.25rem);
+}
+
+.signin-form label {
+  display: block;
+  margin-top: 14px;
+  font-weight: 600;
+}
+
+.signin-form input {
+  width: 100%;
+  padding: 10px 12px;
+  margin-top: 6px;
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  border-radius: 6px;
+  background: rgba(0, 0, 0, 0.35);
+  color: #fff;
+  font-size: 0.95rem;
+}
+
+.signin-form input::placeholder {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.signin-form button {
+  width: 100%;
+  padding: 12px;
+  margin-top: 20px;
+  border-radius: 6px;
+  border: none;
+  background-color: rgba(184, 134, 11, 0.9);
+  color: #fff;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out, transform 0.2s ease-in-out;
+}
+
+.signin-form button:hover {
+  background-color: rgba(218, 165, 32, 0.95);
+  transform: translateY(-1px);
+}
+
+.signin-form .form-text {
+  margin-top: 14px;
+  text-align: center;
+}
+
+.signin-form a {
+  color: #fff;
+  font-weight: 700;
+}
+
+.signin-page hr {
+  margin-top: 2rem;
+  width: 100%;
+  max-width: 960px;
+  border: none;
+  border-top: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.signin-footer {
+  width: 100%;
+  max-width: 960px;
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+  padding: 0 1.5rem 2rem;
+}
+
+.signin-footer .footer-links {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem 1.5rem;
+  padding: 0;
+  margin: 0;
+}
+
+.signin-footer .footer-links a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.signin-footer .social-links {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.signin-footer .social-links img {
+  height: 32px;
+  width: 32px;
+}
+
+.signin-page footer {
+  margin-top: auto;
+}
