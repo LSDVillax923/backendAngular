@@ -1,10 +1,24 @@
 :host {
+  position: relative;
   display: block;
-  background: linear-gradient(rgba(2, 2, 2, 0.65), rgba(2, 2, 2, 0.85)),
-    url('/images/imagenes-fondo/soberbioBistroistro.jpg') center/cover no-repeat;
   color: #f5f5f5;
   min-height: 100vh;
   font-family: 'Poppins', 'Helvetica Neue', Arial, sans-serif;
+  isolation: isolate;
+}
+
+:host::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  background: linear-gradient(rgba(2, 2, 2, 0.65), rgba(2, 2, 2, 0.85)),
+    url('/images/imagenes-fondo/soberbioBistroistro.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  pointer-events: none;
+  will-change: transform;
 }
 
 .menu-page {
