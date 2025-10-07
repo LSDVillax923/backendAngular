@@ -1,38 +1,187 @@
-* {
-  box-sizing: border-box;
+:host {
+  display: block;
+  min-height: 100vh;
 }
 
-.app-nav {
-  align-items: center;
-  background-color: rgba(7, 7, 7, 0.85);
-  backdrop-filter: blur(4px);
+.app-shell {
   display: flex;
-  gap: 1.5rem;
-  justify-content: center;
-  padding: 1rem 1.5rem;
+   flex-direction: column;
+  min-height: 100vh;
+}
+
+.app-header {
   position: sticky;
   top: 0;
   z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+  padding: 1rem clamp(1.5rem, 3vw, 3rem);
+  background: rgba(7, 7, 7, 0.85);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
 }
 
-.app-nav a {
+.app-header__brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.85rem;
   color: #f7f7f7;
-  font-family: 'Montserrat', Arial, sans-serif;
-  font-size: 0.95rem;
-  font-weight: 600;
-  letter-spacing: 0.08em;
-  text-decoration: none;
   text-transform: uppercase;
-  transition: color 0.2s ease, border-color 0.2s ease;
-  padding-bottom: 0.25rem;
+  letter-spacing: 0.18em;
+  font-size: clamp(0.8rem, 1.2vw, 0.95rem);
+  font-weight: 700;
+}
+
+.app-header__brand span {
+  white-space: nowrap;
+}
+
+.app-header__brand img {
+  height: 56px;
+  width: auto;
+  filter: drop-shadow(0 0 0 transparent);
+}
+
+.app-header__brand:hover,
+.app-header__brand:focus-visible {
+  color: #c9a25d;
+  outline: none;
+}
+
+.app-header__links {
+  display: flex;
+  align-items: center;
+  gap: 1.75rem;
+}
+
+.app-header__links a {
+  color: #f7f7f7;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  font-size: clamp(0.75rem, 0.95vw, 0.9rem);
+  font-weight: 600;
   border-bottom: 2px solid transparent;
+  padding-bottom: 0.35rem;
+  transition: color 0.2s ease, border-color 0.2s ease;
 }
 
-.app-nav a:hover {
+.app-header__links a:hover,
+.app-header__links a:focus-visible {
   color: #c9a25d;
-}
-
-.app-nav a.active {
   border-color: #c9a25d;
+  outline: none;
+}
+.app-header__link--active {
   color: #c9a25d;
+  border-color: #c9a25d;
+}
+
+.app-header__toggle {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  gap: 0.35rem;
+  background: rgba(15, 15, 20, 0.65);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 0.75rem;
+  padding: 0.55rem 0.65rem;
+  cursor: pointer;
+  transition: background-color 0.2s ease, border-color 0.2s ease;
+}
+
+.app-header__toggle:hover,
+.app-header__toggle:focus-visible {
+  background: rgba(201, 162, 93, 0.18);
+  border-color: rgba(201, 162, 93, 0.6);
+  outline: none;
+}
+
+.app-header__toggle-bar {
+  width: 26px;
+  height: 3px;
+  border-radius: 999px;
+  background: #f7f7f7;
+}
+
+.app-drawer-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(5, 5, 8, 0.65);
+  backdrop-filter: blur(3px);
+  z-index: 900;
+}
+
+.app-drawer {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: min(320px, 80vw);
+  height: 100vh;
+  padding: 3.5rem clamp(1.75rem, 6vw, 2.5rem);
+  background: rgba(12, 12, 18, 0.98);
+  backdrop-filter: blur(12px);
+  box-shadow: -18px 0 36px rgba(0, 0, 0, 0.45);
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+  transform: translateX(100%);
+  transition: transform 0.3s ease, visibility 0.3s ease;
+  visibility: hidden;
+  pointer-events: none;
+  z-index: 950;
+}
+
+.app-drawer--open {
+  transform: translateX(0);
+  visibility: visible;
+  pointer-events: auto;
+}
+
+.app-drawer__close {
+  align-self: flex-end;
+  background: transparent;
+  border: none;
+  color: #f7f7f7;
+  font-size: 1.65rem;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.app-drawer__close:hover,
+.app-drawer__close:focus-visible {
+  color: #c9a25d;
+  outline: none;
+}
+
+.app-drawer ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 1.5rem;
+}
+
+.app-drawer li a {
+  color: #f7f7f7;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  font-weight: 600;
+  border-bottom: 1px solid transparent;
+  padding-bottom: 0.35rem;
+  transition: color 0.2s ease, border-color 0.2s ease;
+}
+
+.app-drawer li a:hover,
+.app-drawer li a:focus-visible,
+.app-drawer li a.active {
+  color: #c9a25d;
+
+  border-color: #c9a25d;
+  outline: none;
+}
+
+.app-content {
+  flex: 1;
 }
