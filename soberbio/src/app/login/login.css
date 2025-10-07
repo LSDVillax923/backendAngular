@@ -11,7 +11,7 @@
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-   padding-top: 380px;
+  padding-top: clamp(80px, 16vh, 200px);
   font-family: Georgia, 'Times New Roman', serif;
   color: #fff;
 }
