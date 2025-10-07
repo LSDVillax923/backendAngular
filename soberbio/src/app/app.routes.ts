@@ -10,5 +10,18 @@ export const routes: Routes = [
     path: 'menu',
     loadComponent: () => import('./menu/menu/menu').then((m) => m.Menu)
   },
+  {
+    path: 'carrito',
+    loadComponent: () => import('./carrito/carrito').then((m) => m.Carrito)
+  },
+  {
+    path: 'sing-in',
+    loadComponent: () => import('./sing-in/sing-in').then((m) => m.SingIn)
+  },
+  {
+    path: 'login',
+    loadComponent: () => import('./login/login').then((m) => m.Login)
+  },
+  
   { path: '**', redirectTo: 'inicio' }
 ];

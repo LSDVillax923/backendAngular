@@ -23,9 +23,13 @@ interface AppNavigationLink {
 export class App {
   readonly title = 'soberbio';
   readonly currentYear = new Date().getFullYear();
-readonly mainLinks: readonly AppNavigationLink[] = [
+  readonly mainLinks: readonly AppNavigationLink[] = [
     { label: 'Inicio', commands: ['/inicio'], activeOptions: { exact: true } },
     { label: 'Menú', commands: ['/menu'], activeOptions: { exact: false } },
+    { label: 'Carrito', commands: ['/carrito'], activeOptions: { exact: true } },
+    { label: 'Iniciar sesión', commands: ['/login'], activeOptions: { exact: true } },
+    { label: 'Registrarse', commands: ['/sing-in'], activeOptions: { exact: true } },
+
   ];
   readonly supportingLinks: readonly AppNavigationLink[] = [
     { label: 'Nosotros', commands: ['/inicio'], fragment: 'nosotros', activeOptions: { exact: false } },
