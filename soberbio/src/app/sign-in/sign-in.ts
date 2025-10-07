@@ -17,12 +17,12 @@ interface SocialLink {
 
 @Component({
   selector: 'app-sign-in',
-   standalone: true,
+  standalone: true,
   imports: [RouterLink, NgForOf, NgIf],
   templateUrl: './sign-in.html',
-    styleUrl: './sign-in.css',
+  styleUrls: ['../login/login.css', './sign-in.css'],
 })
-export class SingIn {
+export class SignIn {
   readonly footerLinks: FooterLink[] = [
     { label: 'Nosotros', routerLink: ['/inicio'], fragment: 'nosotros' },
     { label: 'Acerca de', routerLink: ['/inicio'], fragment: 'acerca' },

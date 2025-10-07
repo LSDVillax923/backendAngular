@@ -20,7 +20,7 @@ interface SocialLink {
   standalone: true,
   imports: [RouterLink, NgForOf, NgIf],
   templateUrl: './login.html',
-  styleUrl: './login.css',
+  styleUrls: ['./login.css'],
 })
 export class Login {
   readonly footerLinks: FooterLink[] = [
