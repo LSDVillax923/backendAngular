@@ -1,7 +1,75 @@
-<nav class="menu">
-  <ul>
-    <li *ngFor="let link of links">
-      <a [routerLink]="link.path">{{ link.label }}</a>
-    </li>
-  </ul>
-</nav>
+<div class="menu-page">
+  <!-- ====== TOOLBAR ====== -->
+  <header id="toolbar">
+    <div class="left">
+      <a routerLink="/inicio" id="logo-superior">
+        <img id="toolbar-logo" src="/images/logos/logoPrincipalOscuro.png" alt="Soberbio" />
+      </a>
+    </div>
+
+    <div class="right">
+      <a routerLink="/login"><button type="button">Iniciar Sesión</button></a>
+      <a routerLink="/carrito"><button type="button">Carrito</button></a>
+      <a
+        *ngFor="let social of socialLinks"
+        [href]="social.href"
+        target="_blank"
+        rel="noopener noreferrer"
+        [title]="social.title"
+      >
+        <img class="icon" [src]="social.icon" [alt]="social.alt" loading="lazy" />
+      </a>
+    </div>
+  </header>
+
+  <!-- ====== CUERPO MENÚ ====== -->
+  <main id="cuerpo-menu">
+    <section class="menu-grid">
+      <article class="menu-card" *ngFor="let comida of comidas; trackBy: trackByComidaId">
+        <div class="image-wrapper">
+          <img [src]="comida.imagenUrl" [alt]="comida.nombre" loading="lazy" />
+        </div>
+        <div class="card-body">
+          <h3>{{ comida.nombre }}</h3>
+          <p class="descripcion">{{ comida.descripcion }}</p>
+          <p class="precio">{{ formatPrice(comida.precio) }}</p>
+          <a [routerLink]="['/comida', 'info', comida.id]" class="info-link">Ver info</a>
+        </div>
+      </article>
+    </section>
+  </main>
+
+  <!-- ====== FOOTER ====== -->
+  <hr class="menu-divider" />
+  <footer>
+    <a routerLink="/inicio" class="footer-logo">
+      <img src="/images/logos/logoPrincipal.png" height="150" alt="Logo SOBERBIO" title="Inicio" />
+    </a>
+
+    <ul>
+      <li *ngFor="let link of footerLinks">
+        <a
+          *ngIf="link.routerLink; else externalLink"
+          [routerLink]="link.routerLink"
+          [fragment]="link.fragment"
+        >
+          {{ link.label }}
+        </a>
+        <ng-template #externalLink>
+          <a [href]="link.href" target="_blank" rel="noopener noreferrer">{{ link.label }}</a>
+        </ng-template>
+      </li>
+    </ul>
+
+    <div class="social">
+      <a
+        *ngFor="let social of socialLinks"
+        [href]="social.href"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <img [src]="social.icon" height="40" [alt]="social.alt" loading="lazy" />
+      </a>
+    </div>
+  </footer>
+</div>
